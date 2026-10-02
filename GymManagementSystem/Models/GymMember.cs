@@ -2,15 +2,28 @@
 {
     internal class GymMember
     {
-        // ── Properties ──────────────────────────
+        // ── Properties ──────────────────────────────
         public int MemberId;
-        public string Name;
+        public string Name = string.Empty;
         public int Age;
-        public string MembershipType;
+        public string MembershipType = string.Empty;
         public double MonthlyFee;
-        public string JoinDate;
+        public string JoinDate = string.Empty;
 
-        // ── Method: Display Member Info ──────────
+        // ── Constructor ──────────────────────────────
+        public GymMember(int memberId, string name, int age,
+                         string membershipType, double monthlyFee,
+                         string joinDate)
+        {
+            MemberId = memberId;
+            Name = name;
+            Age = age;
+            MembershipType = membershipType;
+            MonthlyFee = monthlyFee;
+            JoinDate = joinDate;
+        }
+
+        // ── Method: Display Member Info ───────────────
         public void DisplayInfo()
         {
             Console.WriteLine("================================");
